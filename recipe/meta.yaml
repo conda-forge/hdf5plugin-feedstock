@@ -20,6 +20,7 @@ build:
     - HDF5PLUGIN_AVX512=False
     - HDF5PLUGIN_BMI2=False
     - HDF5PLUGIN_OPENMP=False
+    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,lz4,zlib,zstd
 
 requirements:
   build:
@@ -34,6 +35,11 @@ requirements:
     - setuptools
     - hdf5
     - py-cpuinfo ==9.0.0
+    - blosc
+    - c-blosc2
+    - lz4-c
+    - zlib
+    - zstd
   run:
     - h5py >=3.0.0
     - python
