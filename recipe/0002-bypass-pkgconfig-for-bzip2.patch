@@ -1,0 +1,23 @@
+diff --git a/setup.py b/setup.py
+index 92eb3d5e0..48efe01a8 100644
+--- a/setup.py
++++ b/setup.py
+@@ -961,6 +961,15 @@ def get_system_clib_names():
+ 
+ @lru_cache()
+ def _get_clib_config_from_pkgconfig(libname):
++    if libname == "bz2":
++        return {
++            "include_dirs": [],
++            "extra_link_args": [],
++            "libraries": ["libbz2" if sys.platform == "win32" else "bz2"],
++            "macros": [],
++            "extra_objects": [],
++        }
++
+     if pkgconfig is None:
+         raise RuntimeError("pkgconfig is required to build against system libraries")
+     if not pkgconfig.exists(libname):
+-- 
+2.43.0
+
