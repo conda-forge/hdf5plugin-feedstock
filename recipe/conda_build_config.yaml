@@ -1,0 +1,6 @@
+# Pin compiler on Linux to avoid a build issue with -ffast-math with compiler v14
+# See discussion in https://github.com/conda-forge/hdf5plugin-feedstock/pull/64
+c_compiler_version:     # [linux]
+  - 13                  # [linux]
+cxx_compiler_version:   # [linux]
+  - 13                  # [linux]
