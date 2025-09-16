@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 bzip2:
 - '1'
 c_blosc2:
-- '2.20'
+- '2.21'
 c_compiler:
 - clang
 c_compiler_version:
@@ -39,6 +39,8 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - python
+  - channel_sources
 zlib:
 - '1'
 zstd:
