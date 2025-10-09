@@ -9,8 +9,6 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 847ed9e96b451367a110f0ba64a3b260d38d64bbf3f25751858d3b56e094cfe0
   patches:
-    # https://github.com/silx-kit/hdf5plugin/pull/339
-    - 0001-convert-pkgconfig-link-args-to-msvc.patch
     - 0002-bypass-pkgconfig-for-bzip2.patch
 
 build:
